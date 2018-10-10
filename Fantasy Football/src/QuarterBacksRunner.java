@@ -3,9 +3,9 @@ import java.util.Scanner;
 
 public class QuarterBacksRunner {
 	public static void main(String[] args) {
-		
+
 		// Welcome message
-		
+
 		System.out.println("Hello! Welcome to the fantasy football preditcor. Please enter your team name:");
 		Scanner userTeam = new Scanner(System.in);
 		String team = userTeam.nextLine();
@@ -182,9 +182,9 @@ public class QuarterBacksRunner {
 		System.out.println("");
 
 		// Wide Receiver Rankings
-		
+
 		ArrayList<wideReceivers> wrRoster = new ArrayList<wideReceivers>();
-		
+
 		wrRoster.add(new wideReceivers("Antonio Brown", 1));
 		wrRoster.add(new wideReceivers("Julio Jones", 2));
 		wrRoster.add(new wideReceivers("Odell Beckham Jr.", 3));
@@ -217,7 +217,7 @@ public class QuarterBacksRunner {
 		wrRoster.add(new wideReceivers("Tyler Lockett", 30));
 		wrRoster.add(new wideReceivers("Doug Baldwin", 31));
 		wrRoster.add(new wideReceivers("Sammy Watkins", 32));
-		
+
 		System.out.println("How many wide receivers do you want to choose from");
 		Scanner userNumber3 = new Scanner(System.in);
 		int inputs3 = userNumber.nextInt();
@@ -260,11 +260,11 @@ public class QuarterBacksRunner {
 		}
 
 		System.out.println("");
-		
-		// Tight Ends 
-		
-		ArrayList <tightends> teRoster = new ArrayList <tightends>();
-		
+
+		// Tight Ends
+
+		ArrayList<tightends> teRoster = new ArrayList<tightends>();
+
 		teRoster.add(new tightends("Travis Kelce", 1));
 		teRoster.add(new tightends("Zach Ertz", 2));
 		teRoster.add(new tightends("Rob Gronkowski", 3));
@@ -297,7 +297,7 @@ public class QuarterBacksRunner {
 		teRoster.add(new tightends("Ian Thomas", 30));
 		teRoster.add(new tightends("Jeff Heuerman", 31));
 		teRoster.add(new tightends("Jonnu Smith", 32));
-		
+
 		System.out.println("How many tight ends do you want to choose from");
 		Scanner userNumber4 = new Scanner(System.in);
 		int inputs4 = userNumber.nextInt();
@@ -340,11 +340,11 @@ public class QuarterBacksRunner {
 		}
 
 		System.out.println("");
-		
+
 		// Defense
-		
+
 		ArrayList<defense> dRoster = new ArrayList<defense>();
-		
+
 		dRoster.add(new defense("Bears", 1));
 		dRoster.add(new defense("Jaguars", 2));
 		dRoster.add(new defense("Vikings", 3));
@@ -373,11 +373,11 @@ public class QuarterBacksRunner {
 		dRoster.add(new defense("Cardinals", 26));
 		dRoster.add(new defense("Broncos", 27));
 		dRoster.add(new defense("49ers", 28));
-		dRoster.add(new defense("Buccaneers",29));
+		dRoster.add(new defense("Buccaneers", 29));
 		dRoster.add(new defense("Chiefs", 30));
 		dRoster.add(new defense("Lions", 31));
 		dRoster.add(new defense("Saints", 32));
-		
+
 		System.out.println("How many defenses do you want to choose from");
 		Scanner userNumber5 = new Scanner(System.in);
 		int inputs5 = userNumber.nextInt();
@@ -420,11 +420,11 @@ public class QuarterBacksRunner {
 		}
 
 		System.out.println("");
-		
+
 		// Kickers
-		
+
 		ArrayList<kickers> kRoster = new ArrayList<kickers>();
-		
+
 		kRoster.add(new kickers("Stephen Gostkowski", 1));
 		kRoster.add(new kickers("Harrison Butker", 2));
 		kRoster.add(new kickers("Matt Bryant", 3));
@@ -451,7 +451,7 @@ public class QuarterBacksRunner {
 		kRoster.add(new kickers("Greg Zuerlein", 24));
 		kRoster.add(new kickers("Brandon McManus", 25));
 		kRoster.add(new kickers("Greg Joseph", 26));
-		
+
 		System.out.println("How many kickers do you want to choose from");
 		Scanner userNumber6 = new Scanner(System.in);
 		int inputs6 = userNumber.nextInt();
@@ -495,62 +495,59 @@ public class QuarterBacksRunner {
 
 		System.out.println("");
 		System.out.println("");
-		
+
 		// Final Roster
-		
+
 		System.out.println(team + "'s final roster is:");
 		System.out.println("--------------------");
-		
-		for (int i = 0; i < roster.size(); i++) 
-		{
+
+		for (int i = 0; i < roster.size(); i++) {
 			if (qbNumber == roster.get(i).getFinalNumber()) {
 				System.out.println("| QB | " + roster.get(i).getName());
 			}
 		}
-		
+
 		System.out.println("--------------------");
-		
-		for (int i = 0; i < rbRoster.size(); i++) 
-		{
+
+		for (int i = 0; i < rbRoster.size(); i++) {
 			if (rbNumber == rbRoster.get(i).getRanking()) {
 				System.out.println("| RB | " + rbRoster.get(i).getName());
 			}
 		}
-		
+
 		System.out.println("--------------------");
-		
-		for (int i = 0; i < wrRoster.size(); i++) 
-		{
+
+		for (int i = 0; i < wrRoster.size(); i++) {
 			if (wrNumber == wrRoster.get(i).getRanking()) {
 				System.out.println("| WR | " + wrRoster.get(i).getName());
 			}
 		}
-		
+
 		System.out.println("--------------------");
-		
+
 		for (int i = 0; i < teRoster.size(); i++) {
 			if (teNumber == teRoster.get(i).getRanking()) {
 				System.out.println("| TE | " + teRoster.get(i).getName());
 			}
 		}
-		
+
 		System.out.println("--------------------");
-		
+
 		for (int i = 0; i < dRoster.size(); i++) {
 			if (dNumber == dRoster.get(i).getRanking()) {
 				System.out.println("| DE | " + dRoster.get(i).getName());
 			}
 		}
-		
+
 		System.out.println("--------------------");
-		
+
 		for (int i = 0; i < kRoster.size(); i++) {
 			if (kNumber == kRoster.get(i).getRanking()) {
 				System.out.println("| K  | " + kRoster.get(i).getName());
 			}
 		}
-		
+
 		System.out.println("--------------------");
-		
+
 	}
 }
